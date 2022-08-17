@@ -1,7 +1,7 @@
 {
-  "name": "native-animator",
-  "version": "1.0.3",
-  "description": "Hook to handle finger-following animations on React Native",
+  "name": "themeor-native",
+  "version": "3.0.0",
+  "description": "Themeor version for react native expo apps",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/opium-pro/native-animator.git"
+    "url": "git+https://github.com/opium-pro/themeor-native.git"
   },
   "author": "opium.pro",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/opium-pro/native-animator/issues"
+    "url": "https://github.com/opium-pro/themeor-native/issues"
   },
-  "homepage": "https://github.com/opium-pro/native-animator#readme",
+  "homepage": "https://github.com/opium-pro/themeor-native#readme",
   "devDependencies": {
     "@types/react": "^18.0.17",
     "@types/react-native": "^0.69.5",
@@ -29,6 +29,6 @@
   "dependencies": {
     "expo-blur": "^11.2.0",
     "expo-linear-gradient": "^11.4.0",
-    "themeor": "^3.0.1-beta"
+    "themeor": "^3.0.2-beta"
   }
 }

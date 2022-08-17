@@ -13,14 +13,14 @@ export const Box: TaglessComponent<BoxProps> = withTagless(({ shadow, borderFill
   const { config } = useConfig()
   let render = children
 
-  shadow && Object.assign(style, config.box.shadow[shadow] || {})
+  shadow && Object.assign(style, config?.box?.shadow?.[shadow] || {})
 
   if (props.fancy) {
     Object.assign(style, { overflow: 'hidden' })
     render =<>
       <LinearGradient
         style={{ position: 'absolute', width: '100%', height: '100%' }}
-        {...config.fillFancy?.[props.fill || 'default'] as any}
+        {...config?.fillFancy?.[props.fill || 'default'] as any}
       />
       {render}
       </>

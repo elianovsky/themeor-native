@@ -19,10 +19,11 @@ export const Icon: FC<IconProps> = ({ fill = 'default', size, inverse, ...initia
 
   const forseInverse = (inverse !== false) && (inverse || TRY_TO_INVERSE)
 
-  const fancy: any = config.fillFancy[fill as any]
+  const fancy: any = config?.fillFancy?.[fill as any]
 
   return (
     <OldIcon {...initialProps}>
+      {/* @ts-ignore */}
       {(Component, props) => {
         const initialStyles = getInitialStyles(ICON_NAME)
 
@@ -37,7 +38,7 @@ export const Icon: FC<IconProps> = ({ fill = 'default', size, inverse, ...initia
           props.fill = `url(#fill)`
         }
 
-        return (
+        const result = (
           <Component
             {...props}
             fill={props.fill || '#000'}
@@ -51,6 +52,8 @@ export const Icon: FC<IconProps> = ({ fill = 'default', size, inverse, ...initia
 </defs>
     `)}
           />)
+
+          return result
       }}
     </OldIcon>
   )
